@@ -7,6 +7,8 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.jinss.android.androidsample.livedata.eventsequence.EventSequenceActivity
+import com.jinss.android.androidsample.recyclerview.itemanimator.ItemAnimatorActivity
 import com.jinss.android.androidsample.recyclerview.selection.SelectionRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -17,6 +19,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         selection_recycler_view.setOnClickListener {
             startActivity(Intent(this, SelectionRecyclerView::class.java))
+        }
+        selection_sequence_event.setOnClickListener {
+            startActivity(Intent(this, EventSequenceActivity::class.java))
+        }
+        selection_item_animator.setOnClickListener {
+            startActivity(Intent(this, ItemAnimatorActivity::class.java))
         }
     }
 
