@@ -89,11 +89,19 @@ class EventSequenceActivity : AppCompatActivity() {
             // 아래 둘의 해시코드는 일치한다. 즉 같은 객체를 물고있다.
             Log.d("jh2174", "1 ${testValue2.channelList.hashCode()} ${testValueLiveData2.value.hashCode()}")
 
+            delay(1000)
+            // LiveChannelData 인스턴스를 새로생성해서 value에 집어넣더라도, 멤버필드자체는 예전의 것을 그대로 쓰기에(testValue2 와 일치)
+            // 사실상 testValue2와 testValueLiveData2.value는 같은 객체를 가르키게된다.
+            testValueLiveData2.value = LiveChannelData(testValueLiveData2.value!!.channelList)
+            Log.d("jh2174", "2 ${testValue2.channelList.hashCode()} ${testValueLiveData2.value.hashCode()}")
+            Log.d("jh2174", "22 ${testValue2.channelList.hashCode()} ${testValueLiveData2.value!!.channelList.hashCode()}")
+
+            delay(1000)
             // 새로운 객체를 생성해서 liveData value에 over write 하게되면 관계는 끊어지게됨 (해시코드가 다르게 나오는거 확인가능)
             val temp = LiveChannelData(arrayListOf())
             temp.channelList.add(Channel("new channel", 2))
             testValueLiveData2.value = temp
-            Log.d("jh2174", "2 ${testValue2.channelList.hashCode()} ${testValueLiveData2.value.hashCode()}")
+            Log.d("jh2174", "3 ${testValue2.channelList.hashCode()} ${testValueLiveData2.value.hashCode()}")
         }
     }
 }
