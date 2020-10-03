@@ -12,10 +12,6 @@ class ItemAdapter : RecyclerView.Adapter<MyItemViewHolder>() {
 
     var data: List<MyItem> = arrayListOf()
 
-    init {
-        setHasStableIds(true)
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyItemViewHolder {
         return MyItemViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.layout_itemanimator_myitem, parent, false)
