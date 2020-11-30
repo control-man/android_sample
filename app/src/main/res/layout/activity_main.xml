@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="theme change test"
+        />
     <Button
         android:id="@+id/selection_recycler_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="Selection Recycler view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="120dp"
+        android:text="Selection Recycler view" />
 
     <Button
         android:id="@+id/selection_sequence_event"
@@ -24,11 +26,6 @@
         android:layout_height="156dp"
         android:layout_marginTop="92dp"
         android:text="Sequence event"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selection_recycler_view"
         app:layout_constraintVertical_bias="0.059" />
 
     <Button
@@ -36,24 +33,13 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="30dp"
-        android:text="item animator test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/retrofit_test"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selection_sequence_event" />
+        android:text="item animator test" />
 
     <Button
         android:id="@+id/retrofit_test"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="30dp"
-        android:text="retrofit test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selection_item_animator"
-        app:layout_constraintVertical_bias="0.358" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="retrofit test" />
+</LinearLayout>
+
