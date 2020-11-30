@@ -38,10 +38,22 @@
         android:layout_marginTop="30dp"
         android:text="item animator test"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/retrofit_test"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selection_sequence_event"
-        app:layout_constraintVertical_bias="0.709" />
+        app:layout_constraintTop_toBottomOf="@+id/selection_sequence_event" />
 
+    <Button
+        android:id="@+id/retrofit_test"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:text="retrofit test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selection_item_animator"
+        app:layout_constraintVertical_bias="0.358" />
 </androidx.constraintlayout.widget.ConstraintLayout>

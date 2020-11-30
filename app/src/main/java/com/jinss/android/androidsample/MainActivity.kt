@@ -10,6 +10,7 @@ import android.view.MenuItem
 import com.jinss.android.androidsample.livedata.eventsequence.EventSequenceActivity
 import com.jinss.android.androidsample.recyclerview.itemanimator.ItemAnimatorActivity
 import com.jinss.android.androidsample.recyclerview.selection.SelectionRecyclerView
+import com.jinss.android.androidsample.retrofit2.RetrofitActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         }
         selection_item_animator.setOnClickListener {
             startActivity(Intent(this, ItemAnimatorActivity::class.java))
+        }
+        retrofit_test.setOnClickListener {
+            startActivity(Intent(this, RetrofitActivity::class.java))
         }
     }
 
