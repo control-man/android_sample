@@ -1,7 +1,9 @@
 package com.jinss.android.androidsample.theme
 
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.jinss.android.androidsample.R
 
 class ThemeActivity : AppCompatActivity() {
@@ -13,5 +15,10 @@ class ThemeActivity : AppCompatActivity() {
         val firstFragment = SettingsFragment()
         supportFragmentManager.beginTransaction()
             .add(R.id.settings_container, firstFragment).commit()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        Log.d("JinssSample", "onConfigurationChanged")
     }
 }
