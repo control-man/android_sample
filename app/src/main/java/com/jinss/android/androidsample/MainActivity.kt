@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        selection_recycler_view.setOnClickListener {
+        selection_theme_change.setOnClickListener {
             startActivity(Intent(this, ThemeActiviity::class.java))
         }
         selection_recycler_view.setOnClickListener {
