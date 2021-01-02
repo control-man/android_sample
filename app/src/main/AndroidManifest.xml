@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".retrofit2.RetrofitActivity"></activity>
-        <activity android:name=".theme.ThemeActiviity"></activity>
+        <activity android:name=".theme.ThemeActivity"></activity>
         <activity android:name=".recyclerview.itemanimator.ItemAnimatorActivity" />
         <activity android:name=".livedata.eventsequence.EventSequenceActivity" />
         <activity android:name=".recyclerview.selection.SelectionRecyclerView" />

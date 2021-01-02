@@ -11,7 +11,7 @@ import com.jinss.android.androidsample.livedata.eventsequence.EventSequenceActiv
 import com.jinss.android.androidsample.recyclerview.itemanimator.ItemAnimatorActivity
 import com.jinss.android.androidsample.recyclerview.selection.SelectionRecyclerView
 import com.jinss.android.androidsample.retrofit2.RetrofitActivity
-import com.jinss.android.androidsample.theme.ThemeActiviity
+import com.jinss.android.androidsample.theme.ThemeActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         selection_theme_change.setOnClickListener {
-            startActivity(Intent(this, ThemeActiviity::class.java))
+            startActivity(Intent(this, ThemeActivity::class.java))
         }
         selection_recycler_view.setOnClickListener {
             startActivity(Intent(this, SelectionRecyclerView::class.java))
@@ -35,6 +35,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RetrofitActivity::class.java))
         }
     }
-
-
 }
